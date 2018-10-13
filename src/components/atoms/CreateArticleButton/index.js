@@ -1,9 +1,8 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import * as React from 'react';
 
 const CreateArticleButton = () => (
   <button>
-    <Link to='/news/write'>기사 작성하기</Link>
+    기사 작성하기
   </button>
 );
 
