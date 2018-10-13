@@ -9,10 +9,10 @@ const Topbar = () => (
     <Nav pullRight>
       <NavItem>
       <ButtonGroup>
-        <Menu nth='1'/>
-        <Menu nth='2'/>
-        <Menu nth='3'/>
-        <Menu nth='4'/>
+        <Menu nth='1' />
+        <Menu nth='2' />
+        <Menu nth='3' />
+        <Menu nth='4' />
         <ButtonLink to='/news/write'>
           기사 작성하기
         </ButtonLink>

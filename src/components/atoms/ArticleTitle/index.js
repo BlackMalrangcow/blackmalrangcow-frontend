@@ -5,7 +5,7 @@ import { Panel } from 'react-bootstrap';
 const ArticleTitle = ({ children }) => (
   <Panel.Heading>
     <Panel.Title>
-      {children}
+      { children }
     </Panel.Title>
   </Panel.Heading>
 );

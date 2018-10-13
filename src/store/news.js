@@ -1,6 +1,6 @@
 const MOVE = 'blackmalrangcow/news/MOVE';
 
-export default function reducer(state = 1, {type, newsPage}) {
+export default function reducer(state = 1, { type, newsPage }) {
   if (type === MOVE) {
     return newsPage;
   }

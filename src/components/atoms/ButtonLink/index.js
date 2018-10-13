@@ -1,7 +1,8 @@
 import * as React from 'react';
-import { withRouter } from 'react-router';
 
 import { Button } from 'react-bootstrap';
+
+import { withRouter } from 'react-router';
 
 const ButtonLink = ({ to, children, onClick = () => {}, history }) => {
   const wrappedClickCallback = e => {
@@ -10,7 +11,7 @@ const ButtonLink = ({ to, children, onClick = () => {}, history }) => {
   };
 
   return (
-    <Button onClick={wrappedClickCallback}>
+    <Button onClick={ wrappedClickCallback }>
       { children }
     </Button>
   );

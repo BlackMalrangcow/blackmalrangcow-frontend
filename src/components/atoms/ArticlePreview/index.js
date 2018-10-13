@@ -1,7 +1,8 @@
-import * as React from 'react';
+import glamorous from 'glamorous';
 
-const ArticlePreview = ({ src }) => (
-  <img alt='No given preview' src={src} style={{width: '900px', height: '500px'}} />
-);
+const ArticlePreview = glamorous.img({
+  width: '900px',
+  height: '500px',
+});
 
 export default ArticlePreview;

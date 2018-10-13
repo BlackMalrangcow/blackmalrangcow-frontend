@@ -1,11 +1,9 @@
-import * as Redux from 'redux';
+import { combineReducers } from 'redux';
 
-import articleReducer from './article';
 import editorReducer from './editor';
 import newsReducer from './news';
 
-export default Redux.combineReducers({
+export default combineReducers({
   editor: editorReducer,
-  opendArticle: articleReducer,
   newsPage: newsReducer,
 });

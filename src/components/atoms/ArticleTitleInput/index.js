@@ -1,11 +1,15 @@
 import * as React from 'react';
-import { connect } from 'react-redux';
+import glamorous from 'glamorous'
 
+import { connect } from 'react-redux';
 import { writeTitle } from 'store/editor';
 
-const ArticleTitleInput = ({ title, updateTitle }) => (
-  <input value={title} style={{marginLeft: 'auto', marginRight: 'auto'}} onChange={updateTitle} placeholder='기사 제목을 입력해 주세요.'/>
-);
+const ArticleTitleInput = glamorous(({ title, updateTitle }) => (
+  <input value={ title } onChange={ updateTitle } placeholder='기사 제목을 입력해 주세요.' />
+))({
+  marginLeft: 'auto',
+  marginRight: 'auto'
+});
 
 const mapStateToProps = ({ editor: { title } }) => ({
   title,

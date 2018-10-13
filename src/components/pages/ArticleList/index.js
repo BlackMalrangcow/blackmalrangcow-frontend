@@ -9,7 +9,7 @@ class ArticleList extends React.Component {
   state = { pending: true, articles: [] };
 
   fetchArticles(newsPage) {
-    fetch(`http://black-malrangcow-api.herokuapp.com/news?category=${newsPage}&amount=5`)
+    fetch(`http://black-malrangcow-api.herokuapp.com/news?category=${ newsPage }&amount=5`)
       .then(response => response.json())
       .then(articles => this.setState({ pending: false, articles }));
     return null;
@@ -22,14 +22,14 @@ class ArticleList extends React.Component {
     return (
       pending ?
         this.fetchArticles(newsPage) :
-        <Carousel style={{width: '900px', height: '500px', marginLeft: 'auto', marginRight: 'auto', marginTop: '100px'}}>
+        <Carousel style={ { width: '900px', height: '500px', marginLeft: 'auto', marginRight: 'auto', marginTop: '100px' } }>
           {
             articles.map( ({ title, preview }, order) =>
-              <Carousel.Item key={order} animateIn={true} animateOut={true}>
-                <ArticlePreview src={preview} />
+              <Carousel.Item key={ order } animateIn={ true } animateOut={ true }>
+                <ArticlePreview src={ preview } />
                 <Carousel.Caption>
-                  <h3>{title}</h3>
-                  <ReadArticleButton title={title}/>
+                  <h3>{ title }</h3>
+                  <ReadArticleButton title={ title }/>
                 </Carousel.Caption>
               </Carousel.Item>
                 )
