@@ -26,7 +26,7 @@ export default () => (
         <Topbar />
         <Route exact path='/' component={() => <ArticleList match={ { params: { newsPage: 1 } } } /> }/>
         <Route exact path='/news/load/:newsPage(\d)' component={ ArticleList } />
-        <Route exact path='/news/get/:title' component={ ArticleRead } />
+        <Route exact path='/news/get/:newsPage/:title' component={ ArticleRead } />
         <Route exact path='/news/write' component={ ArticleWrite } />
       </>
     </Router>

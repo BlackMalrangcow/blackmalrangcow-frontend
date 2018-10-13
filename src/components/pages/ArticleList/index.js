@@ -38,7 +38,7 @@ class ArticleList extends React.Component {
                 <ArticlePreview src={ preview } />
                 <Carousel.Caption>
                   <h3>{ title }</h3>
-                  <ReadArticleButton title={ title }/>
+                  <ReadArticleButton newsPage={newsPage} title={ title } />
                 </Carousel.Caption>
               </Carousel.Item>
                 )

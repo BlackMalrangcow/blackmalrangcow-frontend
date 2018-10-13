@@ -8,8 +8,8 @@ class ArticleRead extends React.Component {
 
   state = { pending: true, content: '' };
 
-  fetchArticle(title) {
-    fetch(`http://black-malrangcow-api.herokuapp.com/news/${ title }`)
+  fetchArticle(title, newsPage) {
+    fetch(`http://black-malrangcow-api.herokuapp.com/news/${newsPage}/${ title }`)
       .then(response => response.json())
       .then(article => this.setState({ pending: false, content: article.content }) );
     return null;
@@ -17,7 +17,7 @@ class ArticleRead extends React.Component {
 
   render() {
     const { pending, content } = this.state;
-    const { match: { params: { title } } } = this.props;
+    const { match: { params: { title, newsPage } } } = this.props;
 
     return (
       <Panel>
@@ -26,7 +26,7 @@ class ArticleRead extends React.Component {
         </ArticleTitle>
         {
           pending ?
-            this.fetchArticle(title) :
+            this.fetchArticle(title, newsPage) :
             <ArticleContent content={ content } />
         }
       </Panel>
