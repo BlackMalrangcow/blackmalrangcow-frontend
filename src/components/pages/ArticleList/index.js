@@ -1,8 +1,17 @@
 import * as React from 'react';
+import glamorous from 'glamorous';
 
 import { Carousel } from 'react-bootstrap';
 import ArticlePreview from 'components/atoms/ArticlePreview';
 import ReadArticleButton from 'components/atoms/ReadArticleButton';
+
+const StyledCarousel = glamorous(Carousel)({
+  width: '900px',
+  height: '500px',
+  marginLeft: 'auto',
+  marginRight: 'auto',
+  marginTop: '100px',
+});
 
 class ArticleList extends React.Component {
 
@@ -22,7 +31,7 @@ class ArticleList extends React.Component {
     return (
       pending ?
         this.fetchArticles(newsPage) :
-        <Carousel style={ { width: '900px', height: '500px', marginLeft: 'auto', marginRight: 'auto', marginTop: '100px' } }>
+        <StyledCarousel>
           {
             articles.map( ({ title, preview }, order) =>
               <Carousel.Item key={ order } animateIn={ true } animateOut={ true }>
@@ -34,7 +43,7 @@ class ArticleList extends React.Component {
               </Carousel.Item>
                 )
           }
-        </Carousel>
+        </StyledCarousel>
     );
   }
 }
