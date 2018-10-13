@@ -3,8 +3,8 @@ import glamorous from 'glamorous';
 const CircleImage = glamorous.img({
   display: 'block',
 
-  width: '77px',
-  height: '77px',
+  width: '110px',
+  height: '110px',
 
   borderRadius: '50%',
 });
